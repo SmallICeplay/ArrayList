@@ -1,0 +1,55 @@
+package ArrayList_Main;
+
+import java.util.ArrayList;
+
+public class Main {
+	/*
+	 * @ArrayList集合类的用法
+	 * @时间2017年5月21日
+	 * @夏天
+	 */
+
+	public static void main(String[] args) {
+	// TODO Auto-generated method stub
+		//创建ArrayList对象al，做xc的泛型
+		ArrayList<xc> al=new ArrayList<xc>();
+		//创建xc的对象x
+		xc x=new xc("sl");
+		//创建xc的对象x1
+		xc x1=new xc("ss");
+		//al对象添加x
+		al.add(x);
+		//al对象添加x1
+		al.add(x1);
+		//输出al的哈希码
+		System.out.println(al.toString());
+		/*System.out.println(al.get(1));
+		System.out.println(al.get(2));*/
+		//输出al集合的长度
+		System.out.println(al.size());
+		//遍历al集合
+		for(int i=0;i<al.size();i++){
+			//做强转，使xc拥有al.get方法
+			xc tv=al.get(i);
+			//输出遍历
+			System.out.println(tv.getName());
+			
+		}
+		System.out.println(al.getClass().getName());
+	}	
+	
+}
+class xc{
+//	private int age;
+	private String name;
+	xc(String name){
+	//	this.age=age;
+		this.name=name;
+	}
+// int getAge() {
+	//	return age;
+	
+	public String getName() {
+		return name;
+	}
+}
